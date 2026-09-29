@@ -39,6 +39,7 @@ homelab-enterprise-soc/
 │   ├── networks.md                ← segments, CIDRs, gateways, DNS
 │   ├── services-ports.md          ← listening services & intended exposure
 │   ├── firewall-rules.md          ← OPNsense rule register with test evidence
+│   ├── accounts.md                ← account register per host: username, purpose, privilege, password, how to apply each one
 │   ├── software-versions.md       ← versions & patch cadence
 │   ├── monitoring-coverage.md     ← what sees what + known gaps
 │   ├── credentials-policy.md      ← secrets handling (no secrets in repo)
