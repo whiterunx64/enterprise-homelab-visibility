@@ -33,16 +33,9 @@ homelab-enterprise-soc/
 │   ├── 08-phase6-kali-attacks.md  ← attacker VM setup
 │   ├── 09-attack-scenarios.md     ← scripted attacks mapped to detections
 │   └── 10-validation-checklist.md ← proof-of-detection checklist, screenshots log
-├── inventory/                     ← asset register / CMDB (single source of truth)
+├── inventory/
 │   ├── README.md
-│   ├── hosts.md / hosts.yml       ← VM register (human + machine-readable)
-│   ├── networks.md                ← segments, CIDRs, gateways, DNS
-│   ├── services-ports.md          ← listening services & intended exposure
-│   ├── firewall-rules.md          ← OPNsense rule register with test evidence
-│   ├── software-versions.md       ← versions & patch cadence
-│   ├── monitoring-coverage.md     ← what sees what + known gaps
-│   ├── credentials-policy.md      ← secrets handling (no secrets in repo)
-│   └── change-log.md              ← dated change record, run profiles, snapshot naming
+│   └── accounts.md                ← account register per host: username, purpose, privilege, password, how to apply each one
 ├── journal/
 │   └── linkedin-templates.md      ← post drafts per phase, for public build-log
 └── diagrams/
@@ -68,8 +61,8 @@ Check these off in this README as you go — GitHub renders checkboxes, and it d
 
 1. Read `docs/00-overview.md` and `docs/01-architecture.md` first — don't build VMs before the network plan is fixed on paper.
 2. Follow `docs/03` → `docs/08` in order. Each phase assumes the previous one is working and validated — don't skip ahead.
-3. Use `docs/10-validation-checklist.md` as your test plan for each phase; screenshot evidence goes in `diagrams/` or a `evidence/` folder you add locally (gitignored if it contains sensitive output).
-4. Keep `inventory/` current as you build: update the relevant file in the **same commit** as each change, and log it in `inventory/change-log.md`.
+3. Use `docs/10-validation-checklist.md` as your test plan for each phase; screenshot evidence goes in `diagrams/` or a `evidence/` folder you add locally.
+4. Keep `inventory/accounts.md` current as you build: add/update a row the same time you create or change an account on a host, and follow its "How to apply each account" section for the exact command/step per host.
 5. Use `journal/linkedin-templates.md` to draft a post at the end of each phase while the details are fresh.
 
 ## Prerequisites
